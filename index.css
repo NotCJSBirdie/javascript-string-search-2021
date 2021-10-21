@@ -1,0 +1,138 @@
+body {
+	margin: 0;
+}
+
+.div1 {
+	font-family: "arial narrow";
+	text-align: center;
+	background-color: lightgray;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.div2 {
+	color: white;
+	font-family: "arial narrow";
+	width: 100%;
+	background-color: black;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	text-align: center;
+	content: "";
+	clear: both;
+	display: table;
+}
+
+.div3 {
+	color: black;
+	font-family: "arial narrow";
+	width: 100%;
+	background-color: white;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	text-align: center;
+	content: "";
+	clear: both;
+	display: table;
+}
+
+.div4 {
+	color: white;
+	font-family: "arial narrow";
+	width: 100%;
+	background-color: black;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	text-align: center;
+	content: "";
+	clear: both;
+	display: table;
+}
+
+.div5 {
+	color: black;
+	font-family: "arial narrow";
+	width: 100%;
+	background-color: white;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	text-align: center;
+	content: "";
+	clear: both;
+	display: table;
+}
+
+.div6 {
+	color: white;
+	font-family: "arial narrow";
+	width: 100%;
+	background-color: black;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	text-align: center;
+	content: "";
+	clear: both;
+	display: table;
+}
+
+.div7 {
+	color: black;
+	font-family: "arial narrow";
+	width: 100%;
+	background-color: white;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	text-align: center;
+	content: "";
+	clear: both;
+	display: table;
+}
+
+.div8 {
+	color: white;
+	font-family: "arial narrow";
+	width: 100%;
+	background-color: black;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	text-align: center;
+	content: "";
+	clear: both;
+	display: table;
+}
+
+.div9 {
+	color: black;
+	font-family: "arial narrow";
+	width: 100%;
+	background-color: white;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	text-align: center;
+	content: "";
+	clear: both;
+	display: table;
+}
+
+#table1,
+#td1,
+#th1 {
+	border: 2px solid white;
+}
+
+#table2,
+#td2,
+#th2 {
+	border: 2px solid black;
+}
+
+#table1,
+#table2 {
+	text-align: center;
+	content: "";
+	clear: both;
+	display: table;
+	border-collapse: collapse;
+	width: 100%;
+	height: auto;
+}

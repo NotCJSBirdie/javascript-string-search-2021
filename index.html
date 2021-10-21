@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="index.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Javascript String Search 2021</title>
+</head>
+
+<body>
+  <div class="div1">
+    <h1>Javascript String Search 2021</h1>
+  </div>
+  <div class="div2">
+    <h3>JavaScript methods for searching strings:</h3>
+    <ul>
+      <li>String.indexOf()</li>
+      <li>String.lastIndexOf()</li>
+      <li>String.startsWith()</li>
+      <li>String.endsWith()</li>
+    </ul>
+  </div>
+  <div class="div3">
+    <h3>String.indexOf()</h3>
+    <p>
+      The indexOf() method returns the index of (the position of) the first
+      occurrence of a specified text in a string:
+    </p>
+
+    <h4>Example</h4>
+    <p>let str = "Please locate where 'locate' occurs!";</p>
+    <p>str.indexOf("locate") // Returns 7</p>
+    <h5>JavaScript counts positions from zero.</h5>
+    <h5>
+      0 is the first position in a string, 1 is the second, 2 is the third ...
+    </h5>
+  </div>
+  <div class="div4">
+    <h3>String.lastIndexOf()</h3>
+    <p>
+      The lastIndexOf() method returns the index of the last occurrence of a
+      specified text in a string:
+    </p>
+
+    <h4>Example</h4>
+    <p>let str = "Please locate where 'locate' occurs!";</p>
+    <p>str.lastIndexOf("locate") // Returns 21</p>
+    <h5>
+      Both indexOf(), and lastIndexOf() return -1 if the text is not found:
+    </h5>
+
+    <h4>Example</h4>
+    <p>let str = "Please locate where 'locate' occurs!";</p>
+    <p>str.lastIndexOf("John") // Returns -1</p>
+    <h5>
+      Both methods accept a second parameter as the starting position for the
+      search:
+    </h5>
+
+    <h4>Example</h4>
+    <p>let str = "Please locate where 'locate' occurs!";</p>
+    <p>str.indexOf("locate", 15) // Returns 21</p>
+    <h5>
+      The lastIndexOf() methods searches backwards (from the end to the
+      beginning), meaning: if the second parameter is 15, the search starts at
+      position 15, and searches to the beginning of the string.
+    </h5>
+
+    <h4>Example</h4>
+    <p>let str = "Please locate where 'locate' occurs!";</p>
+    <p>str.lastIndexOf("locate", 15) // Returns 7</p>
+  </div>
+  <div class="div5">
+    <h3>String.search()</h3>
+    <p>The search() method searches a string for a specified value and returns the position of the match:</p>
+
+    <h4>Example</h4>
+    <p>let str = "Please locate where 'locate' occurs!";</p>
+    <p>str.search("locate") // Returns 7</p>
+    <br>
+    <h3>Did You Notice?</h3>
+    <article>The two methods, indexOf() and search(), are equal?</article>
+
+    <article>They accept the same arguments (parameters), and return the same value?</article>
+
+    <article>The two methods are NOT equal. These are the differences:</article>
+    <ul>
+
+      <li>The search() method cannot take a second start position argument.</li>
+      <li>The indexOf() method cannot take powerful search values (regular expressions).</li>
+      <article>You will learn more about regular expressions in a later chapter.</article>
+
+
+  </div>
+  <div class="div6">
+    <h3>String.match()</h3>
+    <p>The match() method searches a string for a match against a regular expression, and returns the matches, as an
+      Array object.</p>
+
+    <h4>Example 1</h4>
+    <p>Search a string for "ain":<p>
+
+        <p>let text = "The rain in SPAIN stays mainly in the plain";</p>
+        <p>text.match(/ain/g) // Returns an array [ain,ain,ain]</p>
+
+        <br>
+        <p>If the regular expression does not include the g modifier (to perform a global search), the match() method
+          will return only the first match in the string.</p>
+
+        <h5>Syntax</h5>
+        <p>string.match(regexp)<p>
+            <div>
+              <p>regexp Required. The value to search for, as a regular expression.</p>
+              <p>Returns: An Array, containing the matches, one item for each match, or null if no match is found</p>
+            </div>
+            <h4>Example 2</h4>
+            <p>Perform a global, case-insensitive search for "ain":</p>
+            <div>
+              <p>let text = "The rain in SPAIN stays mainly in the plain";</p>
+              <p>text.match(/ain/gi) // Returns an array [ain,AIN,ain,ain]</p>
+            </div>
+  </div>
+  <div class="div7">
+    <h3>String.includes()</h3>
+    <p>The includes() method returns true if a string contains a specified value.</p>
+
+    <h4>Example</h4>
+    <p>let text = "Hello world, welcome to the universe.";</p>
+    <p>text.includes("world") // Returns true</p>
+    <h5>Browser Support</h5>
+    <article>String.includes() is not supported in Internet Explorer.</article>
+
+    <h5>Syntax</h5>
+    <p>string.includes(<em>searchvalue</em>, <em>start</em>)</p>
+    <div>
+      <p><em>searchvalue</em> Required. The string to search for</p>
+      <p><em>start</em> Optional. Default 0. Position to start the search</p>
+      <p><strong>Returns</strong>: Returns true if the string contains the value, otherwise false</p>
+      <p><strong>JS Version</strong>: ES6 (2015)</p>
+    </div>
+    <p>Check if a string includes "world", starting the search at position 12:</p>
+    <div>
+      <p>let text = "Hello world, welcome to the universe.";</p>
+      <p>text.includes("world", 12) // Returns false</p>
+    </div>
+  </div>
+  <div class="div8">
+    <h3>String.startsWith()</h3>
+    <p>The startsWith() method returns true if a string begins with a specified value, otherwise false:</p>
+
+    <h4>Example</h4>
+    <p>let text = "Hello world, welcome to the universe.";</p>
+    <div>
+      <p>text.startsWith("Hello") // Returns true</p>
+    </div>
+    <h5>Syntax</h5>
+    <div>
+      <p>string.startsWith(searchvalue, start)</p>
+    </div>
+    <table id="table1">
+      <tr>
+        <th id="th1"><strong>Parameter Values</strong></th>
+        <th id="th1"><strong>Parameter Description</strong></th>
+      </tr>
+      <tr>
+        <td id="td1">searchvalue</td>
+        <td id="td1">Required. The value to search for.</td>
+      </tr>
+      <tr>
+        <td id="td1">start</td>
+        <td id="td1">Optional. Default 0. The position to start the search.</td>
+      </tr>
+    </table>
+    <h4>Examples</h4>
+    <div>
+      <p>let text = "Hello world, welcome to the universe.";</p>
+
+      <p>text.startsWith("world") // Returns false</p>
+    </div>
+    <div>
+      <p>let text = "Hello world, welcome to the universe.";</p>
+
+      <p>text.startsWith("world", 5) // Returns false</p>
+    </div>
+    <div>
+      <p>
+        let text = "Hello world, welcome to the universe.";</p>
+
+      <p>text.startsWith("world", 6) // Returns true</p>
+    </div>
+
+    <article><strong> Note: The startsWith() method is case sensitive. </strong>
+      <article>
+
+        <p>The startsWith() method is not supported in Internet Explorer.</p>
+  </div>
+  <div class="div9">
+    <h3>String.endsWith()</h3>
+    <p>The endsWith() method returns true if a string ends with a specified value, otherwise false:</p>
+
+    <h4>Example</h4>
+    <p>Check if a string ends with "Doe":</p>
+    <div>
+      <p>var text = "John Doe";</p>
+      <p>text.endsWith("Doe") // Returns true</p>
+    </div>
+    <h5>Syntax</h5>
+    <div>
+      <p>string.endswith(<em>searchvalue</em>, <em>length</em>)</p>
+    </div>
+    <table id="table2">
+      <tr>
+        <th id="th2"><strong>Parameter Values</strong></th>
+        <th id="th2"><strong>Parameter Description</strong></th>
+      </tr>
+      <tr>
+        <td id="td2"><em>searchvalue</em></td>
+        <td id="td2">Required. The value to search for.</td>
+      </tr>
+      <tr>
+        <td id="td2"><em>length</em></td>
+        <td id="td2">Optional. The length to search.</td>
+      </tr>
+    </table>
+    <p>Check in the 11 first characters of a string ends with "world":<p>
+        <div>
+          <p>let text = "Hello world, welcome to the universe."; </p>
+          <p>text.endsWith("world", 11) // Returns true</p>
+        </div>
+        <h5>Note: The endsWith() method is case sensitive.</h5>
+
+        <h5>The endsWith() method is not supported in Internet Explorer.</h5>
+  </div>
+</body>
+
+</html>
